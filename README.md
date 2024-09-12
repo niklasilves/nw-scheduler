@@ -33,4 +33,4 @@ Skriptet är anpassat för möte på torsdagar, för att ändra veckomötesdag �
 ## Schedule-BaseSchedule
 Under utveckling...
 
-Syfte är att om man har ett rullande schema, importera dem direkt färdig schemalagd.
+Syfte är att om man har ett rullande schema, importera dem direkt färdig schemalagda.
