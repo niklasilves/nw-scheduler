@@ -2,6 +2,10 @@
 
 Lite små script för att underlätta schemaläggningen.
 
+- [Add-SundayToDuties](#Add-SundayToDuties)
+- [Schedule-BaseSchedule](#Schedule-BaseSchedule)
+
+<a id="Add-SundayToDuties"></a>
 ## Add-SundayToDuties
 Om man vill schemalägga per möte och ändå schemalägga per vecka och slippa klicka dubbelt upp, kan man använda sig av export och import funktionen tillsammans med skriptet.
 
@@ -30,6 +34,9 @@ Skriptet är anpassat för möte på torsdagar, för att ändra veckomötesdag �
 ```
     [string]$DayOfWeek = 'Thursday'
 ```
+
+
+<a id="Schedule-BaseSchedule"></a>
 ## Schedule-BaseSchedule
 Under utveckling...
 
