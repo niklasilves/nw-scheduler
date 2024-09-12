@@ -24,3 +24,8 @@ Skriptet är anpassat för möte på torsdagar och söndagar ändra siffran på 
 ```
     [int]$AddDays = 3
 ```
+
+## Schedule-BaseSchedule
+Under utveckling...
+
+Syfte är att om man har ett rullande schema, importera dem direkt färdig schemalagd.
