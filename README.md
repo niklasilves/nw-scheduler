@@ -25,14 +25,14 @@ Rad 13 testar filnamnet vilket är på svenska i formatet 'yyyy-MM-dd * Ansvarsu
 
 ### Tips 2
 Skriptet är anpassat för möte på torsdagar och söndagar ändra siffran på rad 19 för att ändra antal dagar det är ifrån veckomötet till helgmötet.
-```
-    [int]$AddDays = 3
+``` powershell
+19:  [int]$AddDays = 3
 ```
 
 ### Tips 3
 Skriptet är anpassat för möte på torsdagar, för att ändra veckomötesdag ändra dagens namn på rad 16
-```
-    [string]$DayOfWeek = 'Thursday'
+``` powershell
+16:  [string]$DayOfWeek = 'Thursday'
 ```
 
 
@@ -41,3 +41,9 @@ Skriptet är anpassat för möte på torsdagar, för att ändra veckomötesdag �
 Under utveckling...
 
 Syfte är att om man har ett rullande schema, importera dem direkt färdig schemalagda.
+
+### Tips 1
+Skriptet är anpassat för möte på torsdagar, för att ändra veckomötesdag ändra dagens namn på rad 16
+``` powershell
+17:  [string]$DayOfWeek = 'Thursday'
+```
