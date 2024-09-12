@@ -16,25 +16,21 @@ param (
 begin{
     $Exportfile = "$PSScriptRoot\duty-Exportfile-$(get-date -Format yyyy-MM-dd).csv"
     $csv = Import-Csv $csvpath
+    [int]$AddDays = 3
 }
 
 process{
     $arr = foreach ($c in $csv){
-        [datetime]$date = $c.Date
-        if ($date -ge $ScheduleFromDate){
-            [datetime]$midweekDate = $c.Date
-            $weekendDate = $date.AddDays(3)
-            $midweekDateFormatted = $midweekDate.ToShortDateString() -replace '-', '/'
-            $weekendDateFormatted = $weekendDate.ToShortDateString() -replace '-', '/'
-
+        [datetime]$midweekDate = $c.Date
+        if ($midweekDate -ge $ScheduleFromDate){
             [PSCustomObject]@{
-                Date = $midweekDateFormatted
+                Date = $midweekDate.ToShortDateString() -replace '-', '/'
                 Person = $c.Person
                 Type = $c.Type
                 TypeName = $c.TypeName
             }
             [PSCustomObject]@{
-                Date = $weekendDateFormatted
+                Date = $midweekDate.AddDays($AddDays).ToShortDateString() -replace '-', '/'
                 Person = $c.Person
                 Type = $c.Type
                 TypeName = $c.TypeName
