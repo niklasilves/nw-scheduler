@@ -20,11 +20,16 @@ Skriptet tar exporten av schemalagd veckomöte och lägger till samma schema fö
 Rad 13 testar filnamnet vilket är på svenska i formatet 'yyyy-MM-dd * Ansvarsuppgifter.csv'. Se till att rad 13 matchar språk och format på filen som exporteras.
 
 ### Tips 2
-Skriptet är anpassat för möte på torsdagar och söndagar ändra siffran på rad 3 för att ändra antal dagar det är ifrån veckomötet till helgmötet.
+Skriptet är anpassat för möte på torsdagar och söndagar ändra siffran på rad 19 för att ändra antal dagar det är ifrån veckomötet till helgmötet.
 ```
     [int]$AddDays = 3
 ```
 
+### Tips 3
+Skriptet är anpassat för möte på torsdagar, för att ändra veckomötesdag ändra dagens namn på rad 16
+```
+    [string]$DayOfWeek = 'Thursday'
+```
 ## Schedule-BaseSchedule
 Under utveckling...
 

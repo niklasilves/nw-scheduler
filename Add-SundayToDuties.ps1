@@ -10,13 +10,23 @@ param (
         }
         return $true
     })]
-    [System.IO.FileInfo]$csvpath = "$PSScriptRoot\$(get-date -Format yyyy-MM-dd) * Ansvarsuppgifter.csv"
+    [System.IO.FileInfo]$csvpath = "$PSScriptRoot\$(get-date -Format yyyy-MM-dd) * Ansvarsuppgifter.csv",
+    
+    [Parameter()]
+    [string]$DayOfWeek = 'Thursday',
+
+    [Parameter()]
+    [int]$AddDays = 3
 )
 
 begin{
     $Exportfile = "$PSScriptRoot\duty-Exportfile-$(get-date -Format yyyy-MM-dd).csv"
     $csv = Import-Csv $csvpath
-    [int]$AddDays = 3
+
+    if (($ScheduleFromDate.DayOfWeek -like $DayOfWeek) -eq $false){
+        Write-Output "-----   Datumet är inte till ett veckomöte: $DayOfWeek"
+        exit
+    }
 }
 
 process{

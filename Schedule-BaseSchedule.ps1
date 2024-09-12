@@ -11,13 +11,21 @@ param (
         return $true
     })]
     [System.IO.FileInfo]
-    $csvpath = "$PSScriptRoot\base_schedule.csv"
+    $csvpath = "$PSScriptRoot\base_schedule.csv",
+
+    [Parameter()]
+    [string]$DayOfWeek = 'Thursday'
 )
 
 begin{
     $Exportfile = "$PSScriptRoot\duty-BaseImport-$(get-date -Format yyyy-MM-dd).csv"
     $csv = Import-Csv $csvpath 
     $group = $csv | Group-Object date
+    
+    if (($ScheduleFromDate.DayOfWeek -like $DayOfWeek) -eq $false){
+        Write-Output "-----   Datumet är inte till ett veckomöte: $DayOfWeek"
+        exit
+    }
 }
 
 process{
