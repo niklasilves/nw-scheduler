@@ -14,7 +14,7 @@ Skriptet tar exporten av schemalagd veckomöte och lägger till samma schema fö
 1. Schemalägg veckomötet i NW Scheduler
 2. Exportera duties till samma sökväg som skriptfilen ligger i
 3. Kör skriptet med att ange från vilket datum som ska schemaläggas
-```
+``` powershell
 .\Add-SundayToDuties.ps1 -ScheduleFromDate 2024-09-26
 ```
 4. En CSV fil skapas i samma sökväg som skriptet som används vid import i NW Scheduler
