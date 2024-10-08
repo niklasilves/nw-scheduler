@@ -13,20 +13,15 @@ param (
     [System.IO.FileInfo]$csvpath = "$PSScriptRoot\$(get-date -Format yyyy-MM-dd) * Ansvarsuppgifter.csv",
     
     [Parameter()]
-    [string]$DayOfWeek = 'Thursday',
+    [DayOfWeek]$MidWeekMeeting = 'Thursday',
 
     [Parameter()]
-    [int]$AddDays = 3
+    [DayOfWeek]$WeekendMeeting = 'Sunday'
 )
 
 begin{
     $Exportfile = "$PSScriptRoot\duty-Exportfile-$(get-date -Format yyyy-MM-dd).csv"
     $csv = Import-Csv $csvpath
-
-    if (($ScheduleFromDate.DayOfWeek -like $DayOfWeek) -eq $false){
-        Write-Output "-----   Datumet är inte till ett veckomöte: $DayOfWeek"
-        exit
-    }
 }
 
 process{
@@ -39,8 +34,12 @@ process{
                 Type = $c.Type
                 TypeName = $c.TypeName
             }
+            [int]$DaysToAdd = [DayOfWeek]::$WeekendMeeting - $midweekDate.DayOfWeek
+            if ($DaysToAdd -lt 0) {
+                $DaysToAdd += 7
+            }
             [PSCustomObject]@{
-                Date = $midweekDate.AddDays($AddDays).ToShortDateString() -replace '-', '/'
+                Date = $midweekDate.AddDays($DaysToAdd).ToShortDateString() -replace '-', '/'
                 Person = $c.Person
                 Type = $c.Type
                 TypeName = $c.TypeName
