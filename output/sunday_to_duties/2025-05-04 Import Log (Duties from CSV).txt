@@ -1,0 +1,23 @@
+2025-05-04 Import Duties Log (CSV) 7.8 1398
+
+Found Duties: 20
+ - Adding New Duty - Date: 2025-06-05, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-06-08, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-06-05, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-06-08, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-06-12, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-06-15, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-06-12, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-06-15, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-06-19, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-06-22, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-06-19, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-06-22, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-06-26, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-06-29, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-06-26, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-06-29, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-07-03, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-07-06, Duty Type: Duty6P1
+ - Adding New Duty - Date: 2025-07-03, Duty Type: Duty5P1
+ - Adding New Duty - Date: 2025-07-06, Duty Type: Duty5P1
